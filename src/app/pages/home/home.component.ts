@@ -15,7 +15,7 @@ export class HomeComponent {
   contraseña= "isaac";
 
   constructor(private globalDataService: LoginService) { }
-
+  
   login(){
     if (this.user == this.usuario && this.pass == this.contraseña) {
       this.guardarDatos();
@@ -40,6 +40,8 @@ export class HomeComponent {
   }
 
   guardarDatos(){
+
+
     localStorage.setItem('usuario',this.usuario)
     localStorage.setItem('login',"true")
     this.globalDataService.globalVariable = true;
